@@ -6,10 +6,11 @@ services:
       target: production
     depends_on:
       - manticore
+    restart: on-failure
 
   manticore:
     container_name: manticore
-    image: manticoresearch/manticore:6.0.4
+    image: manticoresearch/manticore:dev-6.2.13-c10f1d8
     ports:
       - 127.0.0.1:9306:9306
       - 127.0.0.1:9308:9308
@@ -17,7 +18,7 @@ services:
       resources:
         limits:
           cpus: "2"
-          memory: 1G
+          memory: 2G
     ulimits:
       nproc: 65535
       nofile:

@@ -22,6 +22,7 @@ INDEX_STMT = (
     "source_type STRING,  "
     "source_id INTEGER, "
     "is_blogger BOOL) "
+    "engine='columnar'" # движок для колумнар бд
     "index_exact_words = '1' "
     "morphology = 'lemmatize_ru_all, lemmatize_en_all' "
     "charset_table = '0..9, english, russian, _'")
